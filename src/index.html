@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniHamzAl Movie Review</title>
+    <!-- font aweosome -->
+    <script src="https://kit.fontawesome.com/d7195d9855.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="wrapper">
+        <!-- header -->
+        <header>
+            <nav>
+                <div class="logo"><img src="https://previews.123rf.com/images/ylivdesign/ylivdesign1211/ylivdesign121100088/16526995-blue-movie-logo-on-a-black-background.jpg" class="logo-img" alt=""></div>
+                <ul>
+                    <li class="nav-item"><a>Shows</a></li>
+                    <li class="nav-item"><a>Schedule</a></li>
+                    <li class="nav-item"><a>News</a></li>
+                    <li class="nav-item"><a>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section >
+            <label class="show-count"></label>
+            <ul class="show-list">
+                
+            </ul>
+        </section>
+        <!-- footer -->
+        <footer class="footer">
+            Created by AniHamzAl. All Rights Reserved
+        </footer>
+    </main>
+    <!-- comment modal box -->
+
+    <div id="comment-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="movie-info">
+            <img id="show-image" src="x" alt="show image"/>
+            <h2 id="title"></h2>
+            <p id="movie-summary"></p>
+          </div>
+          <div class="comments">
+            <h3>Comments <span id="comment-counter"></span></h3>
+            <ul id="comment-list">
+                
+            </ul>
+          </div>
+          <div class="comment-form">
+              <form id="post-comment-form" class="my-form">
+                  <input type="hidden" id="show_id" name="show_id">
+                  <label>Username:</label>
+                  <input type="text" name="username" placeholder="User name">
+                  <label>Comment:</label>
+                  <textarea name="comment" placeholder="Your comment goes here"></textarea>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+              </form>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- reservation modal box -->
+    <div id="reservation-modal" class="modal my-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="movie-info">
+            <img id="reservation-show-image" src="x" alt="show image"/>
+            <h2 id="reservation-title"></h2>
+            <p id="reservation-movie-summary"></p>
+          </div>
+          <div class="reservations">
+            <h3>Reservations <span id="reservation-counter"></span></h3>
+            <ul id="reservation-list">
+                
+            </ul>
+          </div>
+          <div class="reservation-form">
+              <form id="post-reservation-form" class="my-form">
+                  <input type="hidden" id="show_id-resrv" name="show_id">
+                  <label>Username:</label>
+                  <input type="text" name="username" />
+                  <input type="date" name="state_date"/>
+                  <input type="date" name="end_date"/>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+              </form>
+          </div>
+        </div>
+    </div>
+    <!-- end of comment modal box -->
+</body>
+</html>

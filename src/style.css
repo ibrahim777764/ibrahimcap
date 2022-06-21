@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  background-color: rgb(32, 15, 15);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.logo-img {
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 20px;
+  animation: rotation 8s infinite linear;
+  cursor: pointer;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+nav {
+  background-color: rgb(60, 148, 139);
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  font-size: medium;
+  width: 60%;
+}
+
+.nav-item {
+  padding: 10px 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all ease 0.5s;
+}
+
+.nav-item:hover {
+  background-color: rgb(20, 73, 68);
+  color: white;
+  cursor: pointer;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(60, 148, 139);
+  padding: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+.show-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 34px;
+  margin-right: 45px;
+  list-style: none;
+  align-items: center;
+}
+
+.show-item {
+  perspective: 1000px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform ease-in-out 0.5s;
+}
+
+.show-item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.show-item img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.my-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 20px 10px;
+}
+
+figcaption .likebutton {
+  width: 30px !important;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+figcaption .likebutton:hover {
+  width: 30px !important;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+figure {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  border: 5px solid white;
+  height: 500px;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+.card-comment-btn {
+  background-color: rgb(60, 148, 139) !important;
+}
+
+.show-count {
+  font-weight: bold;
+  font-size: medium;
+  margin-left: 40px;
+  padding: 25px 0 25px 0;
+  color: white;
+}
+
+#reservation-show-image {
+  width: 40%;
+}
+
+#reservation-list,
+#comment-list {
+  list-style: none;
+  font-weight: bold;
+  border: 2px solid rgb(73, 72, 72);
+  width: 50%;
+  margin: 0 auto;
+}
+
+#reservation-list li:nth-child(odd) {
+  background-color: rgb(209, 202, 202);
+}
+
+#comment-list li:nth-child(odd) {
+  background-color: rgb(209, 202, 202);
+}
+
+/* modal css */
+.backshadow {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 50%);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* overflow: auto; */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.backshadow .modal {
+  width: 70%;
+  height: 90vh;
+  background-color: #fff;
+  position: relative;
+  padding: 16px;
+  border: 1px solid #dfe1e6;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 8%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.backshadow .modal .img-div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.backshadow .modal .img-div .img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-title {
+  margin-top: 10px;
+}
+
+.movie-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cross {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.comments-heading {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.comment-form .custom-inputs {
+  margin-bottom: 10px;
+}
+
+.comments-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.comments-container .comment {
+  margin-bottom: 5px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 60px;
+  margin: 40px;
+  margin-right: 100px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #888;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-form input,
+textarea {
+  width: 30%;
+  align-self: center;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+}
+
+.my-form button {
+  margin-top: 10px;
+  width: 30%;
+  align-self: center;
+}
+
+/* The Close Button */
+.close {
+  position: relative;
+  left: 45%;
+  bottom: 10%;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .backshadow .modal {
+    width: 80%;
+    height: 631px;
+  }
+}
